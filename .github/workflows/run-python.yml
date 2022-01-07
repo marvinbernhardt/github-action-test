@@ -19,14 +19,18 @@ jobs:
   run-python:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+     container:
+       image: ghcr.io/votca/buildenv/fedora:gmx2019
+       # https://bugzilla.redhat.com/show_bug.cgi?id=1900021
+       options: --security-opt seccomp=unconfined
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: install NumPy
-        run: python3 -m pip install --upgrade numpy
+      #- name: install NumPy
+      #run: python3 -m pip install --upgrade numpy
 
       - name: Run script
         run: python3 test.py
