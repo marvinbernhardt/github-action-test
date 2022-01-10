@@ -29,8 +29,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      #- name: install NumPy
-      #run: python3 -m pip install --upgrade numpy
+      - name: export
+        run: export
 
       - name: Run script
         run: python3 test.py
