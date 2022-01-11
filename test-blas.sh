@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if hash rpm &> /dev/null; then
-    rpm -qa | blas
+    rpm -qa | grep blas
 fi
 
 if hash apt &> /dev/null; then
