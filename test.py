@@ -13,6 +13,11 @@ def main():
             except AssertionError:
                 print(n, np.linalg.det(A))
                 print(repr(A))
+                for j in range(10):
+                    print("j:", j)
+                    A_inv = np.linalg.inv(A)
+                    print(repr(A_inv))
+                    print(repr(A_inv @ A))
                 exit(1)
 
 
