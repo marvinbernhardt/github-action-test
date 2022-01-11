@@ -18,6 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   run-python:
     strategy:
+      fail-fast: false
       matrix:
         distro: ['fedora:latest', 'fedora:rawhide', 'opensuse:latest', 'ubuntu:latest', 'ubuntu:devel', 'ubuntu:rolling', 'fedora:intel',
           'fedora:nogmx', 'fedora:gmx2019', 'fedora:gmx2019_d', 'fedora:gmx2021', 'fedora:gmx2021_d', 'fedora:gmx9999', 'fedora:gmx9999_d']
