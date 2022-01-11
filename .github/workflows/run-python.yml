@@ -119,5 +119,9 @@ jobs:
         uses: actions/checkout@v2
       - name: export
         run: export
-      - name: test numpy
+      - name: lscpu
+        run: lscpu
+      - name: test with: python3 test.py
+        run: python3 test.py
+      - name: test with: ./test.py
         run: ./test.py
